@@ -11,12 +11,19 @@ const camera = new THREE.PerspectiveCamera(
 
 camera.position.z = 5;
 
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
 const renderer = new THREE.WebGLRenderer({ alpha: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.setClearColor(0x000000);
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-const NODE_COUNT = 70;
+const NODE_COUNT = 55;
 const MAX_DISTANCE = 2.7;
 
 const positions = [];
@@ -35,6 +42,7 @@ geometry.setAttribute(
 
 const material = new THREE.PointsMaterial({
   color: 0xffffff,
+  opacity: 0.3,
   size: 0.05
 });
 
@@ -45,7 +53,7 @@ let lineGeometry = new THREE.BufferGeometry();
 let lineMaterial = new THREE.LineBasicMaterial({
   color: 0x98FB98,
   transparent: true,
-  opacity: 0.2
+  opacity: 0.3
 });
 
 let lines = new THREE.LineSegments(lineGeometry, lineMaterial);

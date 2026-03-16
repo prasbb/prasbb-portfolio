@@ -1,22 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Pras Bairwa</title>
-    <style>
-      body { margin: 0; }
-    </style>
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+
     <script type="importmap">
-    {
-    "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.js",
-        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.183.2/examples/jsm/"
-    }
-    }
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.183.2/examples/jsm/"
+        }
+      }
     </script>
+  </head>
+
   <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">Pras Bairwa | CS @ UIUC | James Scholar </div>
+        <nav class="nav">
+          <a href="#industry">Industry</a>
+          <a href="#research">Research</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+           <a href="#awards">Awards</a>
+        </nav>
+      </header>
+
+      <main class="site-content">
+        <section class="hero">
+          <div class="hero-eyebrow">ML Systems · Research · Engineering</div>
+          <h1>Pras Bairwa</h1>
+          <h2>AI Systems &amp; Machine Learning Engineer</h2>
+
+          <div class="hero-copy">
+            <h3>Computer Science @ UIUC (4.0 GPA)</h3>
+            <h3>
+              Building high-performance retrieval systems, multimodal AI pipelines,
+              and computer vision models.
+            </h3>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View Work</a>
+            <a class="button" href="https://github.com/prasbb/prasbb-portfolio/blob/main/public/Pras_Bairwa_Portfolio.pdf"  target="_blank" rel="noreferrer">CV</a>
+            <a class="button" href="https://github.com/prasbb" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="button" href="https://www.linkedin.com/in/prasheetha-bairwa/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="button" href="#contact">Contact</a>
+          </div>
+        </section>
+
+        <section class="section-card" id="impact">
+          <h2>Core technical work</h2>
+
+<div class="stack">
+
+  <article class="item">
+    <h3>Industrial RAG system for digital twin data</h3>
+        <p>
+        Built a retrieval-augmented generation system from scratch using
+        <strong>LangChain</strong> to query industrial digital twin data at
+        Kongsberg Digital. Implemented <strong>parallel retrievers</strong> and a
+        <strong>multimodal retrieval pipeline</strong> for engineering
+        documentation and operational data, and integrated
+        <strong>Corrective RAG (CRAG)</strong> and <strong>Reflexion-style
+        feedback loops</strong> to improve response accuracy. Achieved a
+        <strong>70% reduction in query latency</strong> through concurrent
+        retrieval and optimized orchestration.
+        </p>
+  </article>
+
+  <article class="item">
+    <h3>Computer vision for biomedical imaging</h3>
+    <p>
+    <p>
+    Developed deep learning models for <strong>label-free SLIM microscopy
+    segmentation</strong> using CNNs, YOLO, and Cellpose. The approach enables
+    automated analysis of cellular structures <strong>without manual labeling</strong>,
+    reducing annotation cost and enabling scalable analysis of microscopy data
+    for traumatic brain injury research.
+    </p>
+    </p>
+  </article>
+
+  <article class="item">
+    <h3>Computer architecture systems</h3>
+    <p>
+    Contributed to the maintenence of <strong>SpimBot</strong>, a MIPS-based
+    autonomous agent simulator used in UIUC’s computer architecture course (CS233).
+    Served as a course assistant, helping students understand instruction
+    execution, pipelining, and memory hierarchy concepts during office hours.
+    </p>
+  </article>
+
+</div>
+</section>
+
+<section class="section-card" id="industry">
+  <h2>Designing retrieval workflows for real-world data.</h2>
+
+  <div class="stack">
+    <article class="item">
+      <h3>Industrial AI systems</h3>
+      <p>
+        At Kongsberg Digital, I worked on retrieval based systems for industrial digital
+        twin data, focusing on orchestration, multimodal retrieval, response correction,
+        and latency-sensitive system design. The work emphasized practical AI engineering:
+        building systems that can handle noisy documentation, operational context, and
+        multiple model backends.
+      </p>
+      <p class="tech">
+        LangChain · RAG · Multimodal Retrieval · CRAG · Reflexion · LLM Orchestration
+      </p>
+    </article>
+
+    <article class="item">
+      <h3>Engineering and teaching</h3>
+      <p>
+        Beyond AI systems work, I’ve also worked in teaching-oriented engineering roles at
+        UIUC. In CS233, I supported a simulator-based computer architecture course through
+        SpimBot maintenance and office hours. In CS124 Honors, I mentored students on convolutional neural network
+        fundamentals and their project analyzing galaxy morphology through CNNs. Their project ended up in the Hall of Fame. Additionally, I authored course material to facilitate introduction to computer vision.
+      </p>
+      <p class="tech">
+        C++ · MIPS · Computer Architecture · Debugging · Mentoring
+      </p>
+      <p>
+        <a href="https://honors.cs124.org/hall_of_fame" target="_blank" rel="noreferrer">See here for Hall of Fame →</a>
+        </p>
+        <p>
+        <a href="https://medium.com/@pbairwa2/layers-in-keras-an-introduction-to-computer-vision-bc82ae63e015" target="_blank" rel="noreferrer">See here for Keras Course Material →</a>
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="section-card" id="research">
+  <h2>Machine Learning Research</h2>
+
+  <div class="stack">
+    <article class="item">
+      <h3>Label-free tissue analysis</h3>
+      <p>
+        My research explores computer vision methods for biomedical imaging,
+        particularly in settings where labeled data is limited or expensive to obtain.
+        In the Cellular Neuroscience Imaging Lab, I developed models for label-free
+        segmentation and automated analysis of microscopy data, with an emphasis on
+        scalable, research useful pipelines. My research is under the supervision of Dr. Catherine Best-Popescu.
+      </p>
+      <p class="tech">
+        Computer Vision · Biomedical Imaging · Deep Learning 
+      </p>
+        <p>
+        <a href="https://bioengineering.illinois.edu/people/cabest" target="_blank" rel="noreferrer">See here for Dr. Catherine Best →</a>
+        </p>
+    </article>
+
+    <article class="item">
+        <h3>Senior thesis</h3>
+        <p>
+        I am completing my senior thesis under the supervision of
+        <strong>Dr. Pablo Robles-Granda</strong>, studying retrieval-augmented
+        generation systems and methods for improving reliability and reasoning
+        in LLM-based pipelines.
+        </p>
+
+        <p>
+        The work investigates techniques for retrieval orchestration,
+        evaluation, and feedback mechanisms in retrieval-augmented models,
+        building on my broader interest in scalable AI systems and
+        information retrieval.
+        </p>
+
+        <p class="tech">
+        RAG Systems · Information Retrieval · LLM Systems · Research Engineering
+        </p>
+      <p><a href="https://siebelschool.illinois.edu/about/people/faculty/pdr" target="_blank" rel="noreferrer">See here for Dr. Pablo Robles Granda →</a> </p>
+    </article>
+  </div>
+</section>
+
+        <section class="section-card" id="projects">
+<h2>Selected technical work</h2>
+
+<div class="grid">
+
+  <article class="item">
+    <h3>Transformer from scratch</h3>
+    <p>
+    Implemented a full encoder–decoder Transformer architecture in
+    <strong>PyTorch</strong>, including custom multi-head attention,
+    positional encoding, and attention masking. The project reproduces
+    the core architecture of modern sequence models while exposing the
+    mechanics of attention, token embeddings, and gradient flow in
+    deep learning systems.
+    </p>
+     <p>
+    <a href="https://github.com/prasbb/Transformer-PyTorch-Implementation" target="_blank">View code →</a>
+  </p>
+  </article>
+
+  <article class="item">
+    <h3>Local retrieval-augmented generation system</h3>
+    <p>
+    Built a local RAG pipeline using <strong>LangChain</strong>,
+    <strong>ChromaDB</strong>, and <strong>Ollama embeddings</strong> to
+    enable semantic document retrieval and LLM-based question answering.
+    Implemented document chunking, embedding indexing, and retrieval
+    pipelines for queryable knowledge bases.
+    </p>
+     <p> <a href="https://github.com/prasbb/local-naive-rag-pipeline-ollama-chromadb" target="_blank">View code →</a> </p>
+  </article>
+
+  <article class="item">
+    <h3>Federated facial detection</h3>
+    <p>
+    Designed a privacy-preserving federated learning system in
+    <strong>Rust</strong> that trains computer vision models across
+    distributed clients using federated averaging. The system simulates
+    decentralized training while keeping raw data local, demonstrating
+    approaches for privacy-aware machine learning.
+    </p>
+    <p> <a href="https://github.com/prasbb/Privacy-Preserving-Facial-Detection-using-Federated-Learning-in-Rust" target="_blank">View code →</a> </p>
+  </article>
+
+</div>
+
+        </section>
+
+      <section class="section-card" id="skills">
+  <h2>Technical toolkit.</h2>
+
+  <div class="stack">
+    <article class="item">
+      <h3>Languages & Systems</h3>
+      <div class="chips">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Java</span>
+        <span>C++</span>
+        <span>C</span>
+        <span>Rust</span>
+        <span>Verilog</span>
+        <span>MIPS Assembly</span>
+      </div>
+    </article>
+
+    <article class="item">
+      <h3>Machine Learning</h3>
+      <div class="chips">
+        <span>Deep Learning</span>
+        <span>Computer Vision</span>
+        <span>Natural Language Processing</span>
+        <span>Retrieval Augmented Generation</span>
+        <span>Multimodal AI</span>
+        <span>Federated Learning</span>
+      </div>
+    </article>
+
+    <article class="item">
+      <h3>Frameworks & Libraries</h3>
+      <div class="chips">
+        <span>PyTorch</span>
+        <span>TensorFlow</span>
+        <span>Scikit-learn</span>
+        <span>LangChain</span>
+        <span>OpenCV</span>
+      </div>
+    </article>
+
+    <article class="item">
+      <h3>Tools & Infrastructure</h3>
+      <div class="chips">
+        <span>Docker</span>
+        <span>Git</span>
+        <span>Linux</span>
+        <span>Azure DevOps</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section-card" id="awards">
+  <h2>Awards</h2>
+
+  <div class="stack">
+
+    <article class="item">
+      <h3>University of Illinois Urbana-Champaign</h3>
+      <p>
+        B.S. in Computer Science at the Grainger College of Engineering.
+    </p>
+    <p>
+        Maintaining a <strong>4.0 GPA</strong> while pursuing research in
+        machine learning and AI systems.
+      </p>
+    </article>
+
+    <article class="item">
+      <h3>Honors & Awards</h3>
+      <p>
+        <strong>URSA Best Overall Presentation Award</strong>
+      </p>
+      <p>
+        <strong>James Scholar</strong> and <strong>Dean’s List (all semesters)</strong>.
+      </p>
+    </article>
+
+    <article class="item">
+      <h3>Scholarships</h3>
+      <p>
+        Illinois Engineering Achievement Scholarship </p>
+        <p>
+        Grainger College of Engineering Outstanding Scholarship
+      </p>
+    </article>
+
+  </div>
+</section>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
-    
