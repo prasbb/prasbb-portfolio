@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prasbb.github.io/prasbb-portfolio/sitemap.xml
